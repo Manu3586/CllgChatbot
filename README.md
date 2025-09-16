@@ -25,7 +25,6 @@ This project is a great starting point for anyone interested in **conversational
 - **Programming Language:** Python  
 - **Framework:** Flask  
 - **Data Storage:** JSON file (for intents/questions & answers)  
-- **Libraries:** (Optional: NLTK, ChatterBot, etc., if used)  
 
 ---
 
