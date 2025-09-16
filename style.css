@@ -1,0 +1,184 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #3a0ca3, #7209b7, #f72585);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Main Chat Container */
+.chat-wrapper {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hidden { display: none; }
+
+/* Welcome Screen */
+.chat-header h2 { font-size: 26px; margin: 15px 0; }
+.chat-header p { font-size: 16px; opacity: 0.9; }
+.bot-image { width: 140px; margin-bottom: 15px; }
+
+/* Animated Bot Image */
+.animated-bot { animation: float 3s infinite ease-in-out; }
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Buttons (Start + Input Send) */
+.start-btn, .chat-input button {
+  border: none;
+  border-radius: 8px;
+  background: #f72585;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.start-btn { margin-top: 20px; padding: 12px 25px; font-size: 16px; }
+.chat-input button { margin-left: 5px; padding: 8px 12px; }
+.start-btn:hover, .chat-input button:hover { background: #b5179e; }
+#mic-btn { background: #f05454; font-size: 18px; }
+
+/* Chat Screen */
+.small-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+}
+.bot-image-small { width: 40px; }
+
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+/* Chat Bubbles */
+.bubble {
+  max-width: 75%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  border-radius: 15px;
+  animation: fadeInUp 0.5s ease;
+}
+.user-bubble {
+  background: #4cc9f0;
+  color: black;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+}
+.bot-bubble {
+  background: #ffb703;
+  color: black;
+  margin-right: auto;
+  border-bottom-left-radius: 5px;
+}
+
+/* Input Section */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn { from {opacity:0; transform:scale(0.9);} to {opacity:1; transform:scale(1);} }
+@keyframes fadeInUp { from {opacity:0; transform:translateY(20px);} to {opacity:1; transform:translateY(0);} }
+
+/* Responsive */
+@media (max-width: 500px) {
+  .chat-wrapper { width: 100%; height: 100vh; border-radius: 0; }
+  .bot-image { width: 100px; }
+  #welcome-screen .bot-image { width: 120px; margin-bottom: 15px; }
+}
+
+/* Center welcome screen */
+#welcome-screen .chat-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+.chat-input {
+  display: flex;
+  align-items: center;   /* ✅ keeps everything vertically centered */
+  gap: 8px;              /* ✅ adds equal spacing between elements */
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.chat-input button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #f72585;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chat-input button:hover {
+  background: #b5179e;
+}
+
+/* 🎤 Mic Icon styling */
+.mic-icon {
+  width: 32px;      /* make it same size as send button */
+  height: 32px;
+  cursor: pointer;
+  filter: invert(1);  /* make it white if your mic.png is black */
+  transition: 0.2s;
+}
+
+.mic-icon:hover {
+  transform: scale(1.1);  /* little hover effect */
+}
+
