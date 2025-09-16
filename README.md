@@ -2,8 +2,6 @@
 
 A basic college chatbot project designed to assist students with common queries.  
 
-**Live Demo:** [CllgChatbot Live](https://manu3586.github.io/CllgChatbot/)
-
 ---
 
 ## 📄 Project Description
@@ -38,7 +36,7 @@ This project is a great starting point for anyone interested in **conversational
 git clone https://github.com/Manu3586/CllgChatbot.git
 cd CllgChatbot
 
-# 2. (Optional) Create and activate a virtual environment
+# 2. Create and activate a virtual environment
 # For Windows
 python -m venv venv
 venv\Scripts\activate
